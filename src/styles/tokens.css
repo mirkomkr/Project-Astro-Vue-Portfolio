@@ -1,0 +1,57 @@
+:root {
+/* Core Units
+------------------------------------------------*/
+--base-unit:                 1rem;
+--base-half-unit:            calc(var(--base-unit) /2);
+
+
+/* Typography
+------------------------------------------------*/
+
+/* Fonts */
+
+--font-family-primary:         "New York", Charter, Georgia, Cambria, "Times New Roman", serif;
+--font-family-secondary:        system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;  
+
+/* Font Size */
+
+--font-base-unit:           var(--base-unit);
+--font-sm-unit:        calc(var(--base-unit) / 1.25);    
+--font-md-unit:        calc(var(--base-unit) * 1.25);
+--font-lg-unit:        calc(var(--md-unit) * 1.25);
+--font-xl-unit:        calc(var(--lg-unit) * 1.25);
+--font-2xl-unit:       calc(var(--xl-unit) * 1.25);
+
+/* Font weights */ 
+
+--font-weight-lighter:  100;
+--font-weight-light:    200; 
+--font-weight-normal:   400; 
+--font-weight-bold:     700; 
+--font-weight-bolder:   900;
+
+
+/* Color
+------------------------------------------------*/
+
+--color-platinum:        #F5F5F7;
+--color-alabaster:       #E3E3E6;
+--color-silver:          #a3a3a3;
+--color-charcoal:        #1C404D;
+--color-ink:             #071013;
+--color-black:           #000000;
+
+/* Color Light Mode */
+
+--bg-page-light-mode:           var(--color-alabaster);
+--font-color-light-mode:        var(--color-ink);
+--border-color-light-mode:      var(--color-charcoal)
+
+/* Color Dark Mode */
+
+--bg-page-dark-mode:            var(--color-ink);
+--font-color-dark-mode:         var(--color-alabaster);
+--border-color-dark-mode:       var(--color-silver);
+
+}
+
