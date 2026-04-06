@@ -1,0 +1,30 @@
+/* 1. Box sizing globale: fondamentale per gestire i padding correttamente */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Rimuove i margini di default che spingono l'header lontano dai bordi */
+body, h1, h2, h3, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* 3. Setup del body per il layout e i tuoi token */
+body {
+  min-height: 100vh;
+  line-height: var(--lh-base);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-family-secondary);
+  -webkit-font-smoothing: antialiased; /* Rende i font più nitidi */
+}
+
+/* 4. Reset per immagini e media */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Eredita i font per i bottoni e gli input */
+input, button, textarea, select {
+  font: inherit;
+}

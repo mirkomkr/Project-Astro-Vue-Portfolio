@@ -19,13 +19,15 @@
   --font-base-unit: var(--base-unit);
   --font-sm-unit: calc(var(--base-unit) / 1.25);
   --font-md-unit: calc(var(--base-unit) * 1.25);
-  --font-lg-unit: calc(var(--md-unit) * 1.25);
-  --font-xl-unit: calc(var(--lg-unit) * 1.25);
-  --font-2xl-unit: calc(var(--xl-unit) * 1.25);
+  --font-lg-unit: calc(var(--font-md-unit) * 1.25);
+  --font-xl-unit: calc(var(--font-lg-unit) * 1.25);
+  --font-2xl-unit: calc(var(--font-xl-unit) * 1.25);
 
   /* Font Weights */
 
   --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
   /* Line heights */
@@ -73,6 +75,16 @@
   --border-radius-small: 0.25rem;
   --border-radius-medium: 0.5rem;
   --border-radius-large: 1rem;
+
+
+  /* Breakpoints */
+------------------------------------------------*/
+
+  --mobile: 27rem; 
+  --tablet: 48rem;  
+  --desktop: 64rem; 
+
+
 }
 
 @media (prefers-color-scheme: dark) {

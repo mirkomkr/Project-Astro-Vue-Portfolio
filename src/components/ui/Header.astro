@@ -1,0 +1,74 @@
+---
+//Header.astro
+const {siteName = "Accessibility Component Library"} = Astro.props;
+import '/src/styles/style.css'
+---
+
+<header class="header-main">
+    <nav class="nav-container" aria-label="Navigazione principale">
+<a href="/" class="logo" aria-label={`Vai alla home di ${siteName}`}>
+<span class="logo-text">{siteName}</span> 
+</a>
+<button 
+      id="menu-toggle" 
+      class="menu-toggle" 
+      aria-expanded="false" 
+      aria-controls="nav-list"
+      aria-label="Apri menu di navigazione"
+    >
+      <svg class="hamburger-icon" viewBox="0 0 100 80" width="20" height="20" aria-hidden="true">
+        <rect width="100" height="15" rx="8"></rect>
+        <rect y="30" width="100" height="15" rx="8"></rect>
+        <rect y="60" width="100" height="15" rx="8"></rect>
+      </svg>
+    </button>
+<ul id="nav-list" class="nav-list">
+    <li><a href="/home"><span>Home</span></a></li>
+    <li><a href="/componenti"><span>Componenti</span></a></li>
+    <li><a href="/accessibilita"><span>Accessibilità</span></a></li>
+    <li><a href="/about"><span>About</span></a></li>
+</ul>
+    </nav>
+</header>
+<script>
+  const btn = document.querySelector('#menu-toggle');
+  const nav = document.querySelector('#nav-list');
+
+  // Funzione riutilizzabile per CHIUDERE il menu
+  const closeMenu = () => {
+    btn?.setAttribute('aria-expanded', 'false');
+    btn?.setAttribute('aria-label', "Apri menu di navigazione");
+    nav?.classList.remove('is-open');
+    // Ritorna il focus al bottone per non far perdere l'utente
+    btn?.focus();
+  };
+
+  // 1. Gestione Click
+  btn?.addEventListener('click', () => {
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    
+    if (isExpanded) {
+      closeMenu();
+    } else {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', "Chiudi menu di navigazione");
+      nav?.classList.add('is-open');
+    }
+  });
+
+  // 2. Gestione Tasto ESC (Global)
+  document.addEventListener('keydown', (event) => {
+    // Se il tasto premuto è Escape E il menu è aperto...
+    if (event.key === 'Escape' && nav?.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // 3. Bonus Senior: Chiudi se clicchi fuori dal menu
+  document.addEventListener('click', (event) => {
+    const isClickInside = nav?.contains(event.target) || btn?.contains(event.target);
+    if (!isClickInside && nav?.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+</script>

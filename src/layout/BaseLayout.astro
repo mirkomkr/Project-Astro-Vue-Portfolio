@@ -1,7 +1,10 @@
 ---
-import BaseLayout from "../layout/BaseLayout.astro"
+//BaseLayout.astro
+import '../styles/tokens.css'
+import '../styles/reset.css'
+import SkipToContent from '../components/a11y/SkipToContent.astro'
+import Header from '../components/ui/Header.astro'
 ---
-
 <html lang="it">
 	<head>
 		<meta charset="utf-8" />
@@ -9,9 +12,11 @@ import BaseLayout from "../layout/BaseLayout.astro"
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Accessibility Component Library</title>
 	</head>
 	<body>
-		<BaseLayout/>
+		<SkipToContent/>
+		<Header/>
 	</body>
+
 </html>
