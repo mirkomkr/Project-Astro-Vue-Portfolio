@@ -50,22 +50,41 @@
   /* Colors
 ------------------------------------------------*/
 
+  /*Palette Base (Colori Primitivi)
+     Queste variabili definiscono l'intera gamma cromatica del progetto.*/
+
   --color-dark-900: #0f1115;
   --color-grey-800: #2d3440;
+  --color-grey-400: #a3a3a3;
   --color-plum-700: #4a1942;
   --color-teal-600: #215061;
-  --color-grey-400: #a3a3a3;
   --color-red-500: #cc2936;
+  --color-platinum-300: #dfdfdf;
   --color-platinum-200: #e8e8ed;
   --color-snow-100: #f5f5f7;
+  --color-teal-100: #e1ebef;
+  --color-plum-100: #eae1e8;
 
+  /* Design Tokens (Tema Chiaro Default)
+     Assegnazione semantica dei colori agli elementi dell'interfaccia. */
+
+  /* Sfondi: toni chiari per mantenere il layout arioso e pulito */
   --bg-page: var(--color-snow-100);
   --bg-surface: var(--color-platinum-200);
+
+  /* Testi: colori scuri e saturi per garantire un ottimo contrasto */
   --text-main: var(--color-plum-700);
   --text-muted: var(--color-teal-600);
+
+  /* Azioni e Stato: per guidare l'utente e segnalare feedback */
   --action-primary: var(--color-teal-600);
   --status-error: var(--color-red-500);
+
+  /* Bordi: per delineare le geometrie senza appesantire la vista */
   --border-main: var(--color-grey-400);
+
+  /* Hover: colore delicato */
+  --bg-hover-subtle: var(--color-teal-100);
 
   /* Border
 ------------------------------------------------*/
@@ -76,23 +95,30 @@
   --border-radius-medium: 0.5rem;
   --border-radius-large: 1rem;
 
-
-  /* Breakpoints */
+  /* Breakpoints
 ------------------------------------------------*/
 
-  --mobile: 27rem; 
-  --tablet: 48rem;  
-  --desktop: 64rem; 
-
-
+  --mobile: 27rem;
+  --tablet: 48rem;
+  --desktop: 64rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Sfondi: transizione verso le tonalità più scure della palette */
     --bg-page: var(--color-dark-900);
     --bg-surface: var(--color-grey-800);
+    --bg-hover-subtle: var(--color-grey-800);
+
+    /* Testi: inversione per garantire un'ottima leggibilità e accessibilità */
     --text-main: var(--color-snow-100);
     --text-muted: var(--color-grey-400);
-    --border-main: var(--color-teal-600);
+
+    /* Azioni e Stato: mantenuti invariati per preservare l'identità visiva e la coerenza */
+    --action-primary: var(--color-teal-600);
+    --status-error: var(--color-red-500);
+
+    /* Bordi: utilizzo di un colore scuro ma distinto per separare delicatamente le interfacce */
+    --border-main: var(--color-plum-700);
   }
 }

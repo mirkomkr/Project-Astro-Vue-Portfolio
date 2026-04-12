@@ -1,0 +1,89 @@
+.hero-main-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.hero-main-title {
+  font-size: var(--font-2xl-unit);
+  font-weight: var(--font-weight-bold);
+}
+
+.hero-sub-title {
+  font-size: var(--font-lg-unit);
+  font-weight: var(--font-weight-medium);
+}
+
+.hero-pars {
+  font-size: var(--font-md-unit);
+  font-weight: var(--font-weight-normal);
+}
+
+.cta-container {
+  flex-direction: row;
+  display: flex;
+  gap: 3rem;
+  padding-top: 5rem;
+}
+
+/* Componenti: Bottoni (Call to Action) */
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--border-radius-small);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* --- Bottone Primario --- */
+.button-primary {
+  background-color: var(--text-main);
+  color: var(--bg-page);
+  border: 0.1rem solid transparent;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background-color: var(--text-muted);
+  color: var(--bg-page);
+}
+
+/* --- Bottone Secondario --- */
+.button-secondary {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 0.1rem solid var(--border-main);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  background-color: var(--bg-hover-subtle);
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+
+@media (max-width: 48rem) {
+  .cta-container {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.hero-main-section{
+  padding-top: 5rem;
+}
+
+}

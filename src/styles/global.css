@@ -1,0 +1,45 @@
+body {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-base-unit);
+  line-height: var(--lh-base);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-primary);
+  line-height: var(--lh-solid);
+}
+
+a {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--action-primary);
+
+  border-radius: var(--border-radius-small);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

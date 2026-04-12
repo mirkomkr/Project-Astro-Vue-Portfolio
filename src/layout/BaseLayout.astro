@@ -2,8 +2,10 @@
 //BaseLayout.astro
 import '../styles/tokens.css'
 import '../styles/reset.css'
+import '../styles/global.css'
 import SkipToContent from '../components/a11y/SkipToContent.astro'
 import Header from '../components/ui/Header.astro'
+import Footer from '../components/ui/Footer.astro'
 ---
 <html lang="it">
 	<head>
@@ -17,7 +19,11 @@ import Header from '../components/ui/Header.astro'
 	<body>
 		<SkipToContent/>
 		<Header/>
- 
+		  <main>
+			    <slot/>
+  			</main>
+		
+ 		<Footer/>
 	</body>
 
 </html>

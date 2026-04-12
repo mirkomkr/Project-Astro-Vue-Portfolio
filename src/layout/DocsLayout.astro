@@ -1,0 +1,16 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+import SideBar from "../components/ui/SideBar.astro"
+import '../styles/docslayout.css'
+---
+<BaseLayout>
+<section class="docs-section" aria-label="Docs section">
+
+<aside class="docs-side">
+<SideBar/>
+</aside>
+<article class="docs-article">
+    <slot/>
+</article>
+</section>
+</BaseLayout>

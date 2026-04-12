@@ -1,0 +1,24 @@
+.docs-section {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.docs-side {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  width: 16rem;
+  border-right: 0.1rem solid var(--border-main);
+  align-self: stretch;
+}
+.docs-article {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media (max-width: 48rem) {
+  .docs-side {
+    display: none;
+  }
+}

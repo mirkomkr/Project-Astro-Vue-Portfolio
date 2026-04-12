@@ -1,0 +1,27 @@
+.sidebar-list {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  padding: var(--space-md);
+  position: relative;
+}
+
+.sidebar-list a {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-lg-unit);
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: var(--space-md);
+  width: fit-content;
+}
+
+.list-components li {
+  width: fit-content;
+}
+
+.sidebar-list a:hover {
+  color: var(--text-main);
+  border-radius: var(--border-radius-small);
+  transition: background-color 0.3s;
+}
