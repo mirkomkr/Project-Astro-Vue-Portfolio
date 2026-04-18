@@ -56,15 +56,16 @@
   display: inline-flex;
   align-items: center;
   color: var(--text-muted);
-  text-decoration: underline;
-  text-decoration-thickness: 0.1rem;
-  text-underline-offset: 0.2rem;
+  text-decoration: none;
+  padding: 0.15rem 0.3rem; 
 }
 
 .nav-list a:hover {
-  color: var(--text-main);
+  color: var(--bg-page);
   border-radius: var(--border-radius-small);
+  background-color: var(--text-main);
   transition: background-color 0.3s;
+  
 }
 
 /* Link social */
