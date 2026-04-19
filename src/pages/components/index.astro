@@ -1,0 +1,66 @@
+---
+//index.astro
+import '../../styles/index.css';
+import CardComponents from '../../components/ui/CardComponents.astro';
+import BaseLayout from '../../layout/BaseLayout.astro';
+
+const cards = [
+  {
+    title: 'Alert',
+    subtitle: 'Alert component for user attention.',
+    href: '/components/alert',
+    badge: 'WCAG AA',
+  },
+  {
+    title: 'Dropdown',
+    subtitle: 'Displays menu for user.',
+    href: '/components/dropdown',
+    badge: 'WCAG AA',
+  },
+  {
+    title: 'Modal',
+    subtitle: 'Popup window that interrupts interaction with the main page.',
+    href: '/components/modal',
+    badge: 'WCAG AA',
+  },
+  {
+    title: 'Tabs',
+    subtitle: 'A layered section of content.',
+    href: '/components/tabs',
+    badge: 'WCAG AA',
+  },
+  {
+    title: 'Toggle Switch',
+    subtitle: 'Two state button that can be either on or off.',
+    href: '/components/toggle',
+    badge: 'WCAG AA',
+  },
+  {
+    title: 'Validation Form',
+    subtitle: 'A classic validation form.',
+    href: '/components/form',
+    badge: 'WCAG AA',
+  },
+];
+---
+
+<BaseLayout>
+  <section class="index-card-section" aria-label="Card section">
+    <h1 class="card-section-title">Components</h1>
+    <p class="card-section-pars">
+      Here you can find the list of components currently available, more will arrive later.
+    </p>
+    <div class="index-card-container">
+      {
+        cards.map((card) => (
+          <CardComponents
+            title={card.title}
+            subtitle={card.subtitle}
+            href={card.href}
+            badge={card.badge}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

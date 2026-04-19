@@ -1,0 +1,13 @@
+---
+//CardComponents.astro
+const { title, subtitle, href, badge } = Astro.props;
+import '../../styles/cardcomponents.css';
+---
+
+<article class="card-container" aria-label={title}>
+  <a href={href}>
+    <h3 class="card-title">{title}</h3>
+    <p class="card-subtitle">{subtitle}</p>
+    <span class="card-badge">{badge}</span>
+  </a>
+</article>
