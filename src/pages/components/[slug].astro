@@ -1,0 +1,65 @@
+---
+import DocsLayout from '../../layout/DocsLayout.astro';
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { slug: 'alert' },
+      props: {
+        title: 'Alert',
+        subtitle: 'Alert component for user attention.',
+        badge: 'WCAG AA',
+      },
+    },
+    {
+      params: { slug: 'dropdown' },
+      props: {
+        title: 'Dropdown',
+        subtitle: 'Displays menu for user.',
+        badge: 'WCAG AA',
+      },
+    },
+    {
+      params: { slug: 'modal' },
+      props: {
+        title: 'Modal',
+        subtitle: 'Popup window that interrupts interaction with the main page.',
+        badge: 'WCAG AA',
+      },
+    },
+    {
+      params: { slug: 'tabs' },
+      props: {
+        title: 'Tabs',
+        subtitle: 'A layered section of content.',
+        badge: 'WCAG AA',
+      },
+    },
+    {
+      params: { slug: 'toggle' },
+      props: {
+        title: 'Toggle Switch',
+        subtitle: 'Two state button that can be either on or off.',
+        badge: 'WCAG AA',
+      },
+    },
+    {
+      params: { slug: 'form' },
+      props: {
+        title: 'Validation Form',
+        subtitle: 'A classic validation form.',
+        badge: 'WCAG AA',
+      },
+    },
+  ];
+}
+
+const { slug } = Astro.params;
+const { title, subtitle, badge } = Astro.props;
+---
+
+<DocsLayout>
+  <h1>{title}</h1>
+  <p>{subtitle}</p>
+  <span>{badge}</span>
+</DocsLayout>
