@@ -1,0 +1,11 @@
+---
+import DocsLayout from '../../layout/DocsLayout.astro';
+import Alert from '../../components/a11y/Alert.vue';
+---
+
+<DocsLayout>
+  <Alert type="error" message="The email field is invalid." />
+  <Alert type="warning" message="Warning, you are about to delete a file." />
+  <Alert type="success" message="Operation completed successfully." />
+  <Alert type="info" message="Update available." />
+</DocsLayout>
