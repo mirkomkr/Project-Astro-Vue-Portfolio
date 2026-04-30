@@ -49,9 +49,9 @@ const props = defineProps({
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-md);
   position: static;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .messageAlert--error {
