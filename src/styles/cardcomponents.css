@@ -2,6 +2,7 @@
   padding: 1.5rem;
   border: 0.2rem solid var(--border-main);
   border-radius: var(--border-radius-medium);
+  
 }
 
 .card-container a {

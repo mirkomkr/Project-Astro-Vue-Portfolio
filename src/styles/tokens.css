@@ -63,7 +63,7 @@
   --color-green-200: #e1f7e9;
   --color-blue-500: #0070ad;
   --color-blue-200: #e0f2ff;
-  --color-orange-500: #FFC914;
+  --color-orange-500: #ffc914;
   --color-orange-200: #fff1e0;
   --color-platinum-300: #dfdfdf;
   --color-platinum-200: #e8e8ed;
@@ -102,12 +102,15 @@
   --alert-warning-border: var(--color-orange-500);
 
   --alert-success-text: var(--color-green-500);
-  --alert-success-bg: var(--color-gree-200);
+  --alert-success-bg: var(--color-green-200);
   --alert-success-border: var(--color-green-500);
 
   --alert-info-text: var(--color-blue-500);
   --alert-info-bg: var(--color-blue-200);
   --alert-info-border: var(--color-blue-500);
+
+  /* Switch */
+  --switch-active: var(--color-teal-600);
 
   /* Border
 ------------------------------------------------*/
@@ -156,5 +159,8 @@
 
     --alert-info-bg: var(--color-grey-800);
     --alert-info-border: var(--color-blue-500);
+
+    /* Switch - dark mode*/
+    --switch-active: var(--color-teal-100);
   }
 }
