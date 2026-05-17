@@ -1,0 +1,33 @@
+---
+import DocsLayout from '../../layout/DocsLayout.astro';
+import Modal from '../../components/a11y/Modal.vue';
+const modalTitle = 'Add Delivery Address';
+---
+
+<DocsLayout>
+  <Modal client:load title={modalTitle}>
+    <form class="dialog_form">
+      <label>
+        <span class="label_text">Street:</span>
+        <input type="text" name="street" id="street_input" />
+      </label>
+      <label>
+        <span class="label_text">City:</span>
+        <input type="text" name="city" id="city_input" />
+      </label>
+      <label>
+        <span class="label_text">State:</span>
+        <input type="text" name="state" id="state_input" />
+      </label>
+      <label>
+        <span class="label_text">Zip:</span>
+        <input type="text" name="zip" id="zip_input" />
+      </label>
+      <label>
+        <span class="label_text">Special instructions:</span>
+        <input type="text" name="instruction" id="instruction_input" />
+      </label>
+      <input type="submit" class="btn-submit" value="Submit" />
+    </form>
+  </Modal>
+</DocsLayout>
